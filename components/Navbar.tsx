@@ -7,11 +7,11 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { name: "Accueil", href: "/" },
-  { name: "Services", href: "#services" },
-  { name: "Notre flotte", href: "#fleet" },
-  { name: "Réalisations", href: "#projects" },
-  { name: "Galerie", href: "#gallery" },
-  { name: "Contact", href: "#contact" },
+  { name: "Services", href: "/#services" },
+  { name: "Notre Flotte", href: "/#fleet" },
+  { name: "Réalisations", href: "/#projects" },
+  { name: "Galerie", href: "/#gallery" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -43,7 +43,7 @@ export default function Navbar() {
 
         </Link>
 
-        {/* Menu Desktop */}
+        {/* Navigation Desktop */}
         <nav className="hidden lg:flex items-center gap-8 font-medium">
 
           {links.map((link) => (
@@ -57,8 +57,8 @@ export default function Navbar() {
           ))}
 
           <Link
-            href="#quote"
-            className="bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition"
+            href="/#quote"
+            className="bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition duration-300"
           >
             Demander un devis
           </Link>
@@ -69,6 +69,7 @@ export default function Navbar() {
         <button
           className="lg:hidden"
           onClick={() => setOpen(!open)}
+          aria-label="Ouvrir le menu"
         >
           {open ? (
             <X size={32} className="text-blue-900" />
@@ -90,16 +91,16 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-lg hover:text-yellow-500"
+                className="text-lg hover:text-yellow-500 transition"
               >
                 {link.name}
               </Link>
             ))}
 
             <Link
-              href="#quote"
+              href="/#quote"
               onClick={() => setOpen(false)}
-              className="bg-yellow-400 text-blue-900 py-3 rounded-lg text-center font-bold hover:bg-yellow-500 transition"
+              className="bg-yellow-400 text-blue-900 py-3 rounded-lg text-center font-bold hover:bg-yellow-500 transition duration-300"
             >
               Demander un devis
             </Link>
