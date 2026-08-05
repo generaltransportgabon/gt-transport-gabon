@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Truck, PackageCheck, MapPinned } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
 
       {/* Image de fond */}
       <Image
@@ -16,28 +15,27 @@ export default function Hero() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/75 to-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/70 to-black/50" />
 
       {/* Contenu */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
 
-        <div className="max-w-3xl">
+        <div className="max-w-2xl">
 
           <span className="inline-block bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-bold text-sm uppercase tracking-wider">
-            🚛 Transport • Manutention • Logistique
+            Transport • Logistique • Manutention
           </span>
 
-          <h1 className="mt-8 text-5xl md:text-7xl font-extrabold text-white leading-tight">
-            Votre partenaire de confiance pour le transport et la logistique au Gabon
+          <h1 className="mt-8 text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            Votre partenaire de confiance au Gabon
           </h1>
 
-          <p className="mt-8 text-xl text-blue-100 leading-9">
+          <p className="mt-6 text-lg md:text-xl text-blue-100 leading-8">
             GT Transport Gabon accompagne les entreprises avec des solutions
-            fiables de transport routier, de manutention et de logistique,
-            partout sur le territoire gabonais.
+            fiables de transport routier, de manutention, de logistique et de
+            convois exceptionnels sur l'ensemble du territoire gabonais.
           </p>
 
-          {/* Boutons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-5">
 
             <Link
@@ -53,32 +51,6 @@ export default function Hero() {
             >
               Découvrir nos services
             </Link>
-
-          </div>
-
-          {/* Arguments de confiance */}
-          <div className="mt-12 grid sm:grid-cols-3 gap-6">
-
-            <div className="flex items-center gap-3 text-white">
-              <Truck className="text-yellow-400" size={28} />
-              <span className="font-medium">
-                Transport routier
-              </span>
-            </div>
-
-            <div className="flex items-center gap-3 text-white">
-              <PackageCheck className="text-yellow-400" size={28} />
-              <span className="font-medium">
-                Manutention & Logistique
-              </span>
-            </div>
-
-            <div className="flex items-center gap-3 text-white">
-              <MapPinned className="text-yellow-400" size={28} />
-              <span className="font-medium">
-                Intervention sur tout le Gabon
-              </span>
-            </div>
 
           </div>
 
