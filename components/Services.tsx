@@ -1,9 +1,10 @@
+import Link from "next/link";
 import FadeIn from "./FadeIn";
 import {
   Truck,
   Container,
   Ship,
-  Wrench,
+  Hammer,
   Package,
   Warehouse,
   ArrowRight,
@@ -15,36 +16,42 @@ const services = [
     title: "Transport Routier",
     description:
       "Transport de marchandises partout au Gabon avec une flotte moderne et sécurisée.",
+    link: "/#fleet",
   },
   {
     icon: Container,
     title: "Transport de Conteneurs",
     description:
       "Transport de conteneurs 20', 40', Open Top, Flat Rack, Reefer et spéciaux.",
+    link: "/#contact",
   },
   {
     icon: Ship,
     title: "Transit Portuaire",
     description:
       "Gestion complète des opérations portuaires, douanières et administratives.",
+    link: "/#contact",
   },
   {
     icon: Warehouse,
     title: "Logistique",
     description:
       "Organisation et optimisation de votre chaîne logistique de bout en bout.",
+    link: "/#contact",
   },
   {
     icon: Package,
     title: "Manutention",
     description:
       "Chargement, déchargement et manipulation d'équipements lourds en toute sécurité.",
+    link: "/#projects",
   },
   {
-    icon: Wrench,
+    icon: Hammer,
     title: "Convois Exceptionnels",
     description:
-      "Transport d'engins de chantier, transformateurs et matériels industriels.",
+      "Transport spécialisé d'engins de chantier, d'équipements industriels et de charges hors gabarit.",
+    link: "/#contact",
   },
 ];
 
@@ -63,7 +70,7 @@ export default function Services() {
               NOS SERVICES
             </span>
 
-            <h2 className="text-5xl font-extrabold text-blue-950 mt-5">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-blue-950 mt-5">
               Des solutions adaptées à vos besoins
             </h2>
 
@@ -102,8 +109,10 @@ export default function Services() {
                     {service.description}
                   </p>
 
-                  <button className="mt-8 flex items-center gap-2 font-semibold text-blue-900 group-hover:text-yellow-500 transition">
-
+                  <Link
+                    href={service.link}
+                    className="mt-8 inline-flex items-center gap-2 font-semibold text-blue-900 group-hover:text-yellow-500 transition"
+                  >
                     En savoir plus
 
                     <ArrowRight
@@ -111,7 +120,7 @@ export default function Services() {
                       className="group-hover:translate-x-2 transition"
                     />
 
-                  </button>
+                  </Link>
 
                 </div>
 
