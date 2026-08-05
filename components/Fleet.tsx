@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const trucks = [
-  "/fleet1.jpg",
-  "/fleet2.jpg",
-  "/fleet3.jpg",
-  "/fleet4.jpg",
-  "/fleet5.jpg",
-  "/fleet6.jpg",
+  "/fleet/fleet1.jpg",
+  "/fleet/fleet2.jpg",
+  "/fleet/fleet3.jpg",
+  "/fleet/fleet4.jpg",
+  "/fleet/fleet5.jpg",
+  "/fleet/fleet6.jpg",
 ];
 
 export default function Fleet() {
